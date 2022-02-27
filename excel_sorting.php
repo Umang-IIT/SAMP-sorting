@@ -155,7 +155,7 @@
     $q=0;
     while($p<count($sorted_mentee_sheet_array)&&$q<count($sorted_mentor_sheet_array)){
         if($allotment_index[$sorted_mentee_sheet_array[$p][0]-1]==-1){
-            if($sorted_mentor_sheet_array[$q][9]==0) $q++;
+            if($sorted_mentor_sheet_array[$q][9] == 0) $q++;
             else{
                 if($sorted_mentee_sheet_array[$p][11]==$sorted_mentor_sheet_array[$q][10]){
                     $allotment_index[$sorted_mentee_sheet_array[$p][0]-1] = $q;
@@ -164,8 +164,6 @@
                 }
                 else if($sorted_mentee_sheet_array[$p][11]<$sorted_mentor_sheet_array[$q][10])  $p++;
                 else $q++;
-
-                
             }
         }
         else $p++;
